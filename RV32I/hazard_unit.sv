@@ -20,7 +20,7 @@ module hazard_unit(
     output  reg [1:0]   ForwardBD,
     output  reg [1:0]   ForwardAE,
     output  reg [1:0]   ForwardBE,
-    output  reg         Stall,          // IF_ID에서 한번만 해줘도 될듯?
+    output  reg         Stall,
     output  reg         Flush_IF_ID,
     output  reg         Flush_ID_EX
 );
@@ -68,7 +68,7 @@ module hazard_unit(
         if (RegWriteE && ((RA1D == WAE) || (RA2D == WAE)) && (ResultSrcE == 2'b01) && (WAE != 5'd0)) begin
                 Stall = 1;
         end else begin
-                Stall = 0;                  // 아님 말고
+                Stall = 0;
         end
     end
 
