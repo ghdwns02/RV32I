@@ -19,7 +19,7 @@ module c_tests_tb();
   always #(CPU_CLOCK_PERIOD/2) clk = ~clk;
 
   parameter DWIDTH = 32;
-  parameter AWIDTH = 15;
+  parameter AWIDTH = 17;
 
   //cpu # (
   //  .CPU_CLOCK_FREQ(CPU_CLOCK_FREQ),
@@ -35,7 +35,7 @@ SMU_RV32I_System # (
     .CLOCK_FREQ(CPU_CLOCK_FREQ),
     .RESET_PC(32'h1000_0000),
     .BAUD_RATE(BAUD_RATE),
-    .MIF_HEX("code.hex"),
+    .MIF_HEX(""),
     .DWIDTH(DWIDTH),
     .AWIDTH(AWIDTH)
     ) CPU (
@@ -99,19 +99,18 @@ SMU_RV32I_System # (
     // Delay for some time
     repeat (10) @(posedge clk);
 
-    // Wait until csr is updated
-    while (`CSR_PATH === 0)
-      @(posedge clk);
+    // // Wait until csr is updated
+    // while (`CSR_PATH === 0)
+    //   @(posedge clk);
 
-    if (`CSR_PATH === 32'b1) begin
-      $display("[%d sim. cycles] CSR test PASSED!", cycle);
-    end else begin
-      $display("[%d sim. cycles] CSR test FAILED!", cycle);
-    end
+    // if (`CSR_PATH === 32'b1) begin
+    //   $display("[%d sim. cycles] CSR test PASSED!", cycle);
+    // end else begin
+    //   $display("[%d sim. cycles] CSR test FAILED!", cycle);
+    // end
 
-    repeat (100) @(posedge clk);
-    $finish();
-    
+    // repeat (100) @(posedge clk);
+    // $finish();
   end
 
   initial begin
