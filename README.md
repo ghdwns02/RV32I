@@ -16,9 +16,10 @@ RV32I_project/
 │   ├── 11.RV32I_isa_tests
 │   ├── 21.RV32I_c_tests
 │   ├── 31.RV32I_tbman_tests
-│   ├── 32.RV32I_gpio_tests
+│   ├── 32.RV32I_sync_gpio_tests
 │   ├── 33.RV32I_timer_tests
-│   ├── 34.RV32I_uart_tests
+│   ├── 33.RV32I_sync_timer_tests
+│   ├── 34.RV32I_sync_uart_tests
 │   ├── 52.RV32I_Integrated_Test
 │   ├── 53.RV32I_sync_Integrated_Test_update
 │   ├── 60.RV32I_sync_Integrated_Test_update_with_CSR
@@ -29,6 +30,7 @@ RV32I_project/
 │   └── source
 │       ├── refCPU
 │       └── myCPU
+│           ├── rev00_ASYNC	# Pipelined RISC-V CPU for RV32I with Async Mem + Peripheral(tbman, timer)
 │           ├── rev00_SYNC	# Pipelined RISC-V CPU for RV32I with Sync Mem + Peripheral(tbman, timer)
 │           └── rev01_SYNC	# Pipelined RISC-V CPU for RV32I with Sync Mem + Peripheral(tbman, gpio, timer, uart)
 └── software/
