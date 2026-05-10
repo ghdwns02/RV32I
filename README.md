@@ -7,7 +7,7 @@
 ## 디렉터리 구조
 
 ```
-RV32I_project/
+RV32I/
 ├── hardware/
 │   ├── 01.RV32I_Integrated_Test_partial_type
 │   ├── 02.RV32I_Integrated_Test
@@ -46,12 +46,12 @@ RV32I_project/
 
 ### 컴파일 + 시뮬레이션 (Makefile 사용)
 
-	$ cd RV32I_project/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/
+	$ cd RV32I/hardware/01.RV32I_Integrated_Test_partial_type/sim/func_sim/
 	$ make
 	
 	...
 
-	$ cd RV32I_project/hardware/21.RV32I_c_tests/sim/func_sim/
+	$ cd RV32I/hardware/21.RV32I_c_tests/sim/func_sim/
 	$ make
 	$ ./simv +hex_file=fib.hex
 	$ ./simv +hex_file=strcmp.hex
@@ -60,13 +60,13 @@ RV32I_project/
 	$ ./simv +hex_file=sum.hex
 	$ ./simv +hex_file=replace.hex
 
-	$ cd RV32I_project/hardware/11.RV32I_isa_tests/sim/func_sim
+	$ cd RV32I/hardware/11.RV32I_isa_tests/sim/func_sim
 	$ make run test=all
 
-	$ cd RV32I_project/hardware/61.RV32I_sync_isa_tests/sim/func_sim
+	$ cd RV32I/hardware/61.RV32I_sync_isa_tests/sim/func_sim
 	$ make run test=all
 
-	$ cd RV32I_project/hardware/71.RV32I_sync_c_tests/func_sim/
+	$ cd RV32I/hardware/71.RV32I_sync_c_tests/func_sim/
 	$ make
 	$ ./simv +hex_file=fib.hex
 	$ ./simv +hex_file=strcmp.hex
@@ -75,16 +75,16 @@ RV32I_project/
 	$ ./simv +hex_file=sum.hex
 	$ ./simv +hex_file=replace.hex
 
-	$ cd RV32I_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer
+	$ cd RV32I/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer
 	$ make run test=all
 
-	$ cd RV32I_project/hardware/81.RV32I_sync_tbman_tests/sim/func_sim_timer
+	$ cd RV32I/hardware/81.RV32I_sync_tbman_tests/sim/func_sim_timer
 	$ make run test=all
 	$ ./simv +hex_file=tbman_basic.hex
 	$ ./simv +hex_file=tbman_printf.hex
 	$ ./simv +hex_file=dhrystone.hex
 
-	$ cd RV32I_project/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
+	$ cd RV32I/hardware/83.RV32I_sync_timer_tests/sim/func_sim_timer_dhrystone
 	$ make run test=all
 
 ## run.f 구성하는 RTL 소스 파일
